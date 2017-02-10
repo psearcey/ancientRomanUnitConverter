@@ -1,0 +1,73 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+import java.util.Scanner;
+
+public class Projec2_PatrickSearcey {
+
+	public static void main(String[] args) {
+
+		// Below are the 4 ancient unit constants
+		final double FINGERS = 18.5;
+		final double THUMBS = 24.6;
+		final double PALMS = 74;
+		final double GREATER_PALMS = 222;
+
+		// Creating Scanner inputs for ancient unit and ancient measurement
+		Scanner scnr = new Scanner(System.in);
+
+		// Below are the printed lines with inputs
+		System.out.println("Welcome to the Ancient Convertor!");
+		System.out.print("What is the ancient unit?" + " ");
+		String ancientUnit = scnr.nextLine();
+		System.out.print("What is the ancient measurement?" + " ");
+		double ancientMeasurement = scnr.nextDouble();
+		
+		// closing the scanner
+		scnr.close();
+
+		// if and else if statements to determine the correct output
+		if (ancientUnit.equals("finger")) {
+
+			double totalMeasurement = (FINGERS * ancientMeasurement);
+			double totalRound = Math.round(totalMeasurement);
+			System.out.println(ancientMeasurement + " " + "finger(s)" + " " + "is equivalent to" + " " + (totalRound)
+					+ " " + "millimeter(s).");
+
+		} else if (ancientUnit.equals("thumb")) {
+
+			double totalMeasurement = (THUMBS * ancientMeasurement);
+			double totalRound = Math.round(totalMeasurement);
+			System.out.println(ancientMeasurement + " " + "thumnb(s)" + " " + "is equivalent to" + " " + (totalRound)
+					+ " " + "millimeter(s).");
+
+		} else if (ancientUnit.equals("palm")) {
+
+			double totalMeasurement = (PALMS * ancientMeasurement);
+			double totalRound = Math.round(totalMeasurement);
+			System.out.println(ancientMeasurement + " " + "palms(s)" + " " + "is equivalent to" + " " + (totalRound)
+					+ " " + "millimeter(s).");
+
+		} else if (ancientUnit.equals("greater palm")) {
+
+			double totalMeasurement = (GREATER_PALMS * ancientMeasurement);
+			double totalRound = Math.round(totalMeasurement);
+			System.out.println(ancientMeasurement + " " + "greaterPalm(s)" + " " + "is equivalent to" + " "
+					+ (totalRound) + " " + "millimeter(s).");
+
+		}
+
+		return;
+
+	}
+
+}
